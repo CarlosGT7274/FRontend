@@ -1,33 +1,18 @@
 @extends('layouts.forms')
 
 @section('content')
-<div style="margin-bottom: 20px;" class="container-fluid">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">On the minute</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="#">Mi perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cerrar sesion</a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-</div>
+
 
 <div class="d-flex flex-row" style="width: 100%;justify-content: space-between;/* gap: 100px; */">
-  <div style="display: flex;width: 150px;"  >
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white ">
+  <div style="display: flex;width: 280px;background-color: \rgb(54,54,59);margin: 15px;border-radius: 0.75rem;position:sticky;top:15px;bottom:15px;z-index:10;height:100vh">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white " style="
+    background-color: rgb(54,54,59) !important;
+    border-radius: 0.75rem;
+    margin: 15px 0px 0px 22px;">
+          <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+            <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-5 fw-semibold" style="color: white">On the minute</span>
+          </a>
           <ul class="list-unstyled ps-0">
               <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
@@ -95,15 +80,31 @@
     </nav>
   </div>
 
-  {{-- <div class="d-flex flex-row" style="gap: 25px;width: 80%;flex-wrap:wrap;">
-    <div class="p-2" ><canvas id="miGrafico"></canvas></div>
-    <div class="p-2" ><canvas id="miGrafico2"></canvas></div> 
-    <div id="grafico" class="p-2"></div>
-    <div id="graficoesgenerales" class="p-2"></div>
-    <div id="graficosalarios"></div>
-    <div id="graficorotaciones"></div>
-  </div> --}}
-  <div id="wrapper">
+<div style="width: 100%">
+  <div style="margin-bottom: 20px;" class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          {{-- <a class="navbar-brand" href="#">On the minute</a> --}}
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="#">Mi perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar sesion</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</div>
+  <div id="wrapper" style="width: 100%">
     <div class="content-area">
       <div class="container-fluid">
         <div class="main">
@@ -124,7 +125,7 @@
               </div>
             </div>
           </div>
-
+  
           <div class="row mt-5 mb-4">
             <div class="col-md-6">
               <div class="box">
@@ -137,7 +138,7 @@
               </div>
             </div>
           </div>
-
+  
           <div class="row mt-4 mb-4">
             <div class="col-md-6">
               <div class="box">
@@ -152,7 +153,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   </div>
+
 </div>
+  
+
+
 @endsection
